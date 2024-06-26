@@ -14,15 +14,15 @@ public class input2 {
 		int pay, netPay;
 		float netPay2;
 		System.out.println("이름을 입력하세요");
-		scan.next("name");
+		scan.next(name);
 		System.out.println("소속부서명을 입력하세요");
-		scan.next("sect");
+		scan.next(sect);
 		System.out.println("월 급여액을 입력하세요");
 		pay=scan.nextInt();
 		netPay=pay*92/100;
 		netPay2=pay*0.92f;
-		System.out.printf("이름 : %s, 소속부서 : %s, 실수령액 : %d원","name","sect",netPay);
-		System.out.printf("이름 : %s, 소속부서 : %s, 실수령액 : %.1f원","name","sect",netPay2);
+		System.out.printf("이름 : %s, 소속부서 : %s, 실수령액 : %d원",name,sect,netPay);
+		System.out.printf("이름 : %s, 소속부서 : %s, 실수령액 : %.1f원",name,sect,netPay2);
 
 	}
 
