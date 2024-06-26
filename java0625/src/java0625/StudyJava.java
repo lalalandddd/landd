@@ -42,6 +42,32 @@ public class StudyJava {
 		int allPrise=purchase*keyboardPrise;
 		System.out.println("키보드 가격 : "+keyboardPrise+", 구매 수량 : "+purchase+", 총 구매 금액 : "+allPrise);
 		
+		// 출력 방법의 차이
+		System.out.print("자바 출력 방법 print");  // \n : end line... 줄바꿈 표시
+		System.out.print("줄바꿈이 안 된다!");  // \n = enter키의 keycode
+		System.out.printf("printf \n 출력");
+		// printf에서만 되는 것 : 서식 문자 - 형식지정문자
+		System.out.printf("\n총 금액 : %d \n", allPrise);
+		// %d, %u : 10진수 정수  // %f : 10진수 실수  // %c : 문자  // %s : 문자열
+		// %b : boolean(false, true)  // %o : 8진수 정수  // %x : 16진수 정수
+		System.out.printf("국어 : %d점, 수학 : %d점 \n",80,90);
+//		System.out.printf("%d+%f", 3.14,80);  // 데이터 타입이 맞지 않으므로 실행시키면 오류!
+		System.out.printf("%d+%f\n",80,3.14);  // 80+3.140000 정상 출력 소숫점은 6자리까지 출력
+		System.out.printf("나이 : %d, 키 : %f\n",34,172.0);
+		System.out.println(172.315);
+		System.out.print(172.315);
+		System.out.printf("\n %f",172.315);
+		System.out.printf("\n %.0f",172.315);
+		System.out.printf("\n %.1f",172.315);
+		System.out.printf("\n %.2f",172.315);  // 반올림!
+		System.out.printf("\n %.2f",172.314);  // 반올림!
+		System.out.printf("\n %.3f",172.315);
+		System.out.printf("\n %.4f",172.315);
+		System.out.printf("\n %.7f\n",172.315);  // 6개 초과도 가능
+		System.out.println(3);
+		System.out.printf("%d",3);
+		System.out.printf("\n%5d",3);
+		System.out.printf("\n%s 마을의 나이가 %d살인 폭군지도자 %c씨", "코딩빌",30,'박');
 
 	}
 
