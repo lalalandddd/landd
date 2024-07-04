@@ -42,9 +42,9 @@ public class javaMethod {
 	}
 
 }
-class a{
-	int num=10;
-	static void out() {
-		System.out.println(num);
-	}
-}
+//class a{
+//	int num=10;
+//	static void out() {
+//		System.out.println(num);
+//	}
+//}
