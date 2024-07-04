@@ -11,8 +11,8 @@ public class MainClass {
 		tv.power();
 		tv.power();
 		Aircon aircon=new Aircon();
-		System.out.println(tv.brand);
-		System.out.println(aircon.brand);
+		System.out.println(tv.brand);  // 삼성
+		System.out.println(aircon.brand);  // null
 		aircon.power();
 		aircon.power();
 		Computer com=new Computer();
@@ -32,4 +32,8 @@ public class MainClass {
 // 다형성 : 하나의 타입으로 다른 여러 타입을 제어/사용하기 위함
 //        부모 클래스의 인스턴스 변수, 인스턴스 메서드, 클래스 변수, 클래스 메서드 모두 사용 가능
 //        일부 사용하지 못하는 것이 있다. 제어자(static, public 현재까진 단 두 개)
-//        난이도가 있으므로 마지막에 배울 예정 예)toString
+// 다형성은 난이도가 있으므로 마지막에 배울 예정 예)toString
+
+// 상속에서 주의할 점 : 자식클래스에 super()=(부모를 의미) 메서드가 생략되어있다.
+// 그래서 tv.brand="삼성" 하면 house 의 brand에 저장이 아니라
+// tv의 brand에 저장되므로 aircon의 brand는 아무것도 없어서 null이 뜬다.

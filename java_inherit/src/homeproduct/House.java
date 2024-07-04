@@ -9,6 +9,10 @@ public class House {
 	House(){
 		this.onOff=false;
 	}
+	House(String brand,int price){
+		this.brand=brand;
+		this.price=price;  // 매개변수 있는 메서드를 만들면 빨간 줄이 사라진다.
+	}
 	void power() {
 		this.onOff=!this.onOff;
 		System.out.println(this+"전원 : "+this.onOff);

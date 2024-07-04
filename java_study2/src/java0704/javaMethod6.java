@@ -36,10 +36,8 @@ class Game{  // rock-paper-scissors 게임
 		}
 	}
 	void userInput() {
-		while(true) {System.out.print("가위 바위 보 중 하나를 입력하세요");
+		System.out.print("가위 바위 보 중 하나를 입력하세요");
 		user=scan.nextLine();
-		if(user!="가위"&&user!="바위"&&user!="보") {break;
-		}else {break;}
 	}
 	void result() {
 		if(user.equals(com)) {
