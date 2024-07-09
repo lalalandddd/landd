@@ -37,7 +37,7 @@ public class Dao {
 		try {
 			conn=DriverManager.getConnection(url,user,password);  // Connection을 import할 것!!
 		}catch(Exception e) {
-			System.out.println("드라이버 연결 실패");
+			System.out.println("로그인 실패");
 		}  // DriverNanager를 import할 것!!
 	}
 //	public void insert(Member m) {  // 단 정부 의뢰의 경우, 보안상 취약하여(변조 가능성) Statement를 권장하지 않음
