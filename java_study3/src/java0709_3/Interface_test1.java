@@ -23,7 +23,7 @@ interface RestCustomer{
 	public void setCustomer(String customer);  // 추상메서드
 	public String food();
 }
-class ReservCustomerA implements RestCustomer{
+class ReservCustomerA implements RestCustomer{  // 독립 class로 활용하면 추가사항이 있을 때, 이 부분만 추가하면 된다.
 	String customer;  //  예약 손님A
 	@Override
 	public void setCustomer(String customer) {
@@ -48,7 +48,7 @@ class ReservCustomerB implements RestCustomer{
 class Owner{  // 사장
 	void food(RestCustomer cus) {
 		System.out.println(cus.food());
-	}
+	}  // interface 사용하면 이 부분은 이렇게만 해두고 추가는 위의 class만 넣으면 된다.
 }
 public class Interface_test1 {
 
@@ -63,3 +63,16 @@ public class Interface_test1 {
 		open.food(b);
 	}
 }
+
+// 초등학생, 중학생, 고등학생, 대학생?
+// 부모 클래스로 학생(공통점)
+// 이름, 반, 키, 학년, 번호, 성적 등등의 class를 interface로 가면 모든 학생이 사용할 수 있다. - 다형성
+// 변호사, 검사, 소방관, 의사, 미화원  >  부모class  이름, 나이, 근무지, 연봉, 업무....
+
+// 단순 데이터 뿐 가공 메서드가 없다? interface를 할 필요가 없다. 상속관계를 맺지 않는다.
+// 상속관계(interface)는 데이터에 더해서 데이터를 가공하는 기능이 있어야 적합하다.
+
+// 사용자 요청 처리 class - 컨트롤 class
+// 사용자 요청에 필요한 데이터를 가공 및 수집하여 실행하는 class - 서비스 class
+// 데이터만 저장하는 class - 사용자에게 제공할 데이터 class(VO,DTO) / 데이터베이스에 저장하기 위한 class(Entity)
+// 데이터베이스 처리 인터페이스 - repository
