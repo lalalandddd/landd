@@ -3,7 +3,7 @@ package java0710;
 abstract class animal {  // 부모 클래스
 //	public abstract void fly();  // 개,냥,소 는 날 수 없지만 이게 있으면 무조건 받아야 한다.
 // 받지 않을 것이면 자식클래스가 추상클래스가 되어야 하는데 그러면 객채를 만들 수 없으므로 안 된다...
-	public abstract void sound();
+	public abstract void sound();  // class 상속은 오직 한개만
 }
 class Dog extends animal{
 	@Override
@@ -15,24 +15,28 @@ class Cat extends animal{
 	@Override
 	public void sound() {
 		System.out.println("냐옹");
+	}
 }
 class Chicken extends animal{
 	@Override
 	public void sound() {
 		System.out.println("꼬끼오");
+	}
 }
 class Pigeon extends animal{
 	@Override
 	public void sound() {
 		System.out.println("구구");
+	}
 }
 class Cow extends animal{
 	@Override
 	public void sound() {
 		System.out.println("음메");
+	}
 }
 
-public class InterfaceTest {
+public class InterfaceTest1 {
 
 	public static void main(String[] args) {
 
