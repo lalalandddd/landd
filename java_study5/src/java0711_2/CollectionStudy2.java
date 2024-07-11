@@ -42,6 +42,8 @@ public class CollectionStudy2 {
 				m.setBirth(year+"0000");
 			}
 		}
+		System.out.println(list);
 		System.out.println(list.get(2));
+		
 	}
 }

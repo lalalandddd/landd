@@ -15,6 +15,11 @@ public class Member {
 	public String toString() {
 		return name+", "+age+", "+birth;
 	}
+	@Override
+	public boolean equals(Object o) {
+		Member tmp=(Member)o;
+		tmp.age
+	}  // 이걸 만들었기에 indexOf 등을 쓸 수 있다.
 
 	public String getName() {
 		return name;
