@@ -9,7 +9,8 @@ import java.util.Scanner;  // Scanner 클래스의 위치를 지정해줘야(가져와야) Scann
 public class Input1 {
 
 	public static void main(String[] args) {
-		
+
+		Scanner scan=new Scanner(System.in);
 //		System.out.println("자바출력");
 		// System.out - 출력 ←→ System.in - 입력
 		// 입력받을 수 있는 내장 클래스 : Scanner

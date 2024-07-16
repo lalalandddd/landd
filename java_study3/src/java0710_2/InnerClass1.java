@@ -44,7 +44,7 @@ class Out{
 		}
 		지역내부클래스 ob=new 지역내부클래스();
 	}
-	interface car{  // 내부 인터페이스
+	interface Car{  // 내부 인터페이스
 		void make();  // 메서드
 	}
 	void makeCar() {  // 객체는 만들 수 없지만 익명내부클래스를 사용해서 비슷하게 사용할 수 있다.
