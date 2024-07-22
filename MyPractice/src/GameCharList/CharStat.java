@@ -4,14 +4,15 @@ public class CharStat extends CharReinforce{
 	private int charStatFire;
 	private int charStatHelt;
 	private int charStatHeal;
-	public CharStat(int charStatFire, int charStatHelt, int charStatHeal) {
+	public CharStat(String id, String name, int charPow, int charStatFire, int charStatHelt, int charStatHeal) {
+		super(id,name,charPow);
 		this.charStatFire=charStatFire;
 		this.charStatHelt=charStatHelt;
 		this.charStatHeal=charStatHeal;
 	}
 	@Override
 	public String toString() {
-		return "사격: "+charStatFire+" , 체력: "+charStatHelt+" , 회복: "+charStatHeal;
+		return super.toString()+" 사격: "+charStatFire+" , 체력: "+charStatHelt+" , 회복: "+charStatHeal;
 	}
 	public int getCharStatFire() {
 		return charStatFire;

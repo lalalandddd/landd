@@ -1,6 +1,6 @@
-package homework;
+package java0722_DWCafe;
 
-public class java0722_DWcafe {
+public class java0722_DWCafe {
 
 	public static void main(String[] args) {
 

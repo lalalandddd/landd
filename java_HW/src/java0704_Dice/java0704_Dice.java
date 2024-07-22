@@ -1,4 +1,4 @@
-package homework;
+package java0704_Dice;
 
 import java.util.Scanner;
 

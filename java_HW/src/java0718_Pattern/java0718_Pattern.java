@@ -1,4 +1,4 @@
-package homework;
+package java0718_Pattern;
 
 public class java0718_Pattern {
 }

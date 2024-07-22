@@ -3,8 +3,10 @@ package GameCharList;
 public class CharEquip extends CharReinforce{
 	private String charEquipMain;
 	private String charEquipSub;
-	public CharEquip(String charEquipMain, String charEquipSub) {
+	public CharEquip(String id, String name, int charPow, String charEquipMain, String charEquipSub) {
+		super(id,name,charPow);
 		this.charEquipMain=charEquipMain;
+		this.charEquipSub=charEquipSub;
 	}
 	@Override
 	public String toString() {
