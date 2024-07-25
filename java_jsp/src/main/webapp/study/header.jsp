@@ -1,12 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" import="study.Member" %>
 <%-- header.jsp --%>
 <%
 	String path="http://localhost:8080/java_jsp/study/";
 %>
 <div id="header">
 	<div id="top">
+	<%
+	Member user=(Member)session.getAttribute("user");  // user 없으면 null 반환
+	if(user==null){ %>
 		<span class="topMenu"><a href="<%=path+"?part=signin"%>">로그인</a></span>
+	<% }else {%>
+		<span class="topMenu">
+			<%="'"+user.getUserName()+"' 님 반갑습니다! " %><a href="logout.jsp">로그아웃</a>
+		</span>
+	<% } %>
 		<span class="topMenu">고객센터</span>
 		<span class="topMenu">사이트맵</span>
 	</div>
@@ -14,9 +22,9 @@
 		<div class="logo"></div>
 		<ul class="menuList">
 			<li><a href="<%=path%>">홈</a></li>
-			<li><a href="<%=path%>">게시판</a></li>
-			<li><a href="<%=path%>">자료실</a></li>
-			<li><a href="<%=path%>">공부방</a></li>
+			<li><a href="<%=path+"?part=board"%>">게시판</a></li>
+			<li><a href="<%=path+"?part=reference"%>">자료실</a></li>
+			<li><a href="<%=path+"?part=studyRoom"%>">공부방</a></li>
 			<li><a href="<%=path+"?part=inquiry"%>">문의</a></li>
 		</ul>
 	</div>
