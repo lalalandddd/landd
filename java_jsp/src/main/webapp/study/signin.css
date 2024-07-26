@@ -2,10 +2,32 @@
 /*signin.css*/
 #signinBox{
 	width:400px;
+	height:500px;
 	margin:0 auto;
 }
-#signinBox p{
+.signinInput{
+	width:100%;
+	padding:50px 0px 10px 0px;
+}
+.loginInput{
+	margin-bottom:10px;
 	display:flex;
+	flex-wrap:wrap;
+	align-items:center;
+	font-size:25px;
+}
+.loginInput b{
+	width:120px;
+}
+.loginInput input{
+	width:280px;
+	height:45px;
+	border-radius:10px;
+	font-size:20px;
+	padding-left:10px;
+}
+.loginInput p{
+	width:400px;
 }
 #loginBt{
 	width:100%;
@@ -13,4 +35,17 @@
 	border-radius:10px;
 	background:#5f87ff;
 	padding:15px 0;
+	font-size:24px;
+	color:white;
+	font-weight:800;
+	cursor:pointer;
+}
+.findAndJoin{
+	padding-bottom:50px;
+	display:flex;
+	align-items:center;
+	justify-content: space-between;
+}
+.findAndJoin a:hover{
+	color:blue;
 }

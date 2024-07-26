@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"  import="study.* , java.sql.*" %>
+<%-- inquirySave.jsp --%>
 
 <%
 	request.setCharacterEncoding("UTF-8");
@@ -9,12 +10,16 @@
 	String content = request.getParameter("content");
 	String pw = request.getParameter("password");
 	
+	// 작성한 문의글 관리자에게 메일 전송
+	SendEmail.sendEmail(email,title,content);
+
 	DBconnect db = new DBconnect();
-	
+
 	String sql ="create table if not exists inquiry"+
 	"(inquiry_id int auto_increment primary key, title varchar(255),"+
 	"content text, writer varchar(50), email varchar(100),"+
 	"password varchar(100), answer text)";
+	// DBeaver 테이블 제작 구문,
 	boolean isCreate=true;
 	try{  // inquiry 테이블 이없으면 생성
 		db.pt = db.conn.prepareStatement(sql);
@@ -23,7 +28,7 @@
 		isCreate=false;
 		e.printStackTrace();
 	}
-	
+
 	if( isCreate ){
 		sql = "insert into inquiry(title,writer,content,email, password) values(?,?,?,?,?)";
 		try{
@@ -40,7 +45,7 @@
 			System.out.println("저장실패");
 		}
 		
-		response.sendRedirect("/jsp_study1/study/?part=inquiry");
+		response.sendRedirect("/java_jsp/study/?part=inquiry");
 	}
 %>
 
