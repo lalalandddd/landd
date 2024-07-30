@@ -92,6 +92,8 @@ DTO : Data Transfer Object - 데이터 저장 클래스 (스프링에서 더 세
 <title>Insert title here</title>
 </head>
 <body>
-
+	<br><a href="/main.jsp">로그인 및 회원가입</a>
+	<br><a href="/board.jsp">게시판</a>
+	<br><a href="/inquiry">문의</a>
 </body>
 </html>
