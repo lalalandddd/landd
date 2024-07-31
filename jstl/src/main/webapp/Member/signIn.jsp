@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%-- signin.jsp --%>
 <div id="signinBox">
-	<form id="signFm" method="post" action="signCheck.jsp">
+	<form id="signFm" method="post" action="signInCheck.do">
 		<div class="signinInput">
 			<div class="loginInput">
 				<b>아이디</b>
@@ -14,7 +14,7 @@
 				<input type="password" name="userPassword" id="userPassword">
 				<p class="error"></p>
 			</div>
-			<button type="button" id="loginBt">로그인</button>
+			<button id="loginBt">로그인</button>
 		</div>
 	</form>
 	<div class="findAndJoin">
