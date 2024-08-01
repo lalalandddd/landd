@@ -17,9 +17,12 @@ public class BoardWrite implements MainActive{
 			BoardDTO dto=new BoardDTO(writer,title,content);
 			BoardDAO dao=new BoardDAO();
 			dao.save(dto);
+			try {
+				response.sendRedirect("/board.do");
+			}catch(Exception e) { }
 			return null;  // 게시글 작성
 		}else {  // 게시글 작성 페이지를 요청한 경우
-			return "board/boardWrite.jsp";  // 게시글 작성 페이지로 이동
+			return "/Board/boardWrite.jsp";  // 게시글 작성 페이지로 이동
 		}
 	}
 }

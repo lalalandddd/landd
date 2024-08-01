@@ -10,6 +10,6 @@
 	${message }
 	<h2>${message }</h2>
 	<h1>회원가입 작성하는 페이지(예정)</h1>
-	<a href="/home.jsp">뒤로가기</a>
+	<a href="/main.jsp">뒤로가기</a>
 </body>
 </html>

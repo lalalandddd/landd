@@ -13,7 +13,7 @@
 		<a href="/signIn.do">로그인</a>
 	</c:if>
 	<c:if test="${ sessionScope.user!=null }">
-		${ sessionScope.user }<a href="/logout.do">로그아웃</a>
+		${ sessionScope.user }<a href="/logout.do"> 로그아웃</a>
 	</c:if>
 	<a href="/board.do">게시판</a>
 </body>

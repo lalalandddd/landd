@@ -40,7 +40,7 @@ public class BoardControl extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
-		RequestDispatcher rd=request.getRequestDispatcher("boardWrite.jsp");
+		RequestDispatcher rd=request.getRequestDispatcher("/Board/boardWrite.jsp");
 		rd.forward(request, response);
 	}
 

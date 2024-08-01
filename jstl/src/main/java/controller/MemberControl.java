@@ -38,7 +38,7 @@ public class MemberControl extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String detail="신규회원 가입 10명 남았습니다.";
 		request.setAttribute("message",detail);
-		RequestDispatcher rd=request.getRequestDispatcher("signin.jsp");
+		RequestDispatcher rd=request.getRequestDispatcher("/Member/signIn.jsp");
 		rd.forward(request,response);
 // forward와 redirect의 차이
 // forward : 주소가 바뀌지 않음, 서버에서 데이터를 넘길 수 있음 - 자주 쓰이는 이유

@@ -31,7 +31,7 @@ public class InquiryControl extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		RequestDispatcher rd=request.getRequestDispatcher("inquiry.jsp");
-		rd.forward(request, response);
+		rd.forward(request, response);  // 문의 메뉴 클릭하여 문의 첫 페이지 이동
 	}
 
 	/**
@@ -40,7 +40,7 @@ public class InquiryControl extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		RequestDispatcher rd=request.getRequestDispatcher("inquiry.jsp");
-		rd.forward(request, response);
+		rd.forward(request, response);  // 문의글 작성
 	}
 
 }

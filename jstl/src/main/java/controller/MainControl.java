@@ -65,7 +65,7 @@ public class MainControl extends HttpServlet {
 		doMethod(request,response);
 	}
 	protected void doMethod(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");  // 요청 시 입력값 인코딩
+		request.setCharacterEncoding("UTF-8");  // 요청 시 입력값 한글 인코딩
 		String uri=request.getRequestURI();  // 사용자가 요청한 주소
 		// URI = /signUp.do
 		String cmd=uri.substring(uri.lastIndexOf("/")+1);

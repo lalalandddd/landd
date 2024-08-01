@@ -8,11 +8,13 @@ import DAO.MemberDAO;
 public class SignIn implements MainActive{
 	@Override
 	public String action(HttpServletRequest request, HttpServletResponse response) {
+		String view="/";
 		if(request.getSession().getAttribute("user")!=null) {  // 로그인 상태일 경우
 			request.getSession().removeAttribute("user");
 		}else {  // 로그인 시도
 			String id=request.getParameter("userId");
 			String pw=request.getParameter("userPassword");
+			view=request.getParameter("preURL");
 			// 데이터베이스에서 아이디 비번 조회하기
 			MemberDAO dao=new MemberDAO();
 			boolean isSuccess=dao.login(id,pw);
@@ -22,7 +24,7 @@ public class SignIn implements MainActive{
 		}
 
 		try {
-			response.sendRedirect("/");;
+			response.sendRedirect(view);;
 		}catch(Exception e) {  }
 		return null;
 	}

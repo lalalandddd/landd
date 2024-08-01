@@ -22,7 +22,7 @@ public class MemberDAO extends DBConnect{  // 회원 관련 데이터베이스 작업 하는 �
 		//System.out.println("아이디 또는 비밀번호가 잘못되었습니다");
 	}
 	public void save(MemberDTO member) {  // 회원가입 내용을 DB(studysite_member 테이블)에 저장
-		String sql="insert into member(user_id, user_password, user_email, user_name) value(?,?,?,?)";
+		String sql="insert into studysite_member(user_id, user_password, user_email, user_name) value(?,?,?,?)";
 		try {
 			pt=conn.prepareStatement(sql);
 			pt.setString(1, member.getUserId());
