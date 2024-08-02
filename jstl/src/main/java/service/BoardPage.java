@@ -12,7 +12,7 @@ public class BoardPage implements MainActive{
 	@Override
 	public String action(HttpServletRequest request,HttpServletResponse response) {
 		BoardDAO dao=new BoardDAO();
-		String keyWord=request.getParmeter("word");
+		String keyWord=request.getParameter("word");
 		if(keyWord==null)keyWord="";
 // 여기서부터 페이징 작업
 		int pageNum=1;  // 현재 페이지 번호
@@ -34,12 +34,9 @@ public class BoardPage implements MainActive{
 //			endPage=pageTotalNum;
 		}
 // 여기까지 페이징 작업
-// 여기서부터 게시글 목록 가져오기, 검색 결과
-		public List<BoardDTO> 
-// 여기까지 게시글 목록 가져오기, 검색 결과
 // 게시글 목록 가져오기
 		int start=(pageNum-1)*pagePost;
-		List<BoardDTO> list=dao.findAll(start);  // 전체 게시글 가져오기
+		List<BoardDTO> list=dao.findAll(start, keyWord);  // 전체 게시글 가져오기
 // 페이징 작업 결과 돌려보내기 시작
 		request.setAttribute("startPage",startPage);
 		request.setAttribute("endPage",endPage);

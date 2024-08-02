@@ -10,7 +10,7 @@ public class SignIn implements MainActive{
 	public String action(HttpServletRequest request, HttpServletResponse response) {
 		String view="/";
 		if(request.getSession().getAttribute("user")!=null) {  // 로그인 상태일 경우
-			request.getSession().removeAttribute("user");
+			request.getSession().removeAttribute("user");  // user 세션 삭제
 		}else {  // 로그인 시도
 			String id=request.getParameter("userId");
 			String pw=request.getParameter("userPassword");
@@ -23,9 +23,7 @@ public class SignIn implements MainActive{
 			}
 		}
 
-		try {
-			response.sendRedirect(view);;
-		}catch(Exception e) {  }
+		try { response.sendRedirect(view); }catch(Exception e) {  }
 		return null;
 	}
 }

@@ -1,3 +1,4 @@
+/* board.css */
 @charset "UTF-8";
 #boardWrap{
 	width:700px;
@@ -42,7 +43,8 @@
 	width:100px;
 	background:#272829;
 	border-radius:10px;
-	color:white; cursor:pointer;
+	color:white;
+	cursor:pointer;
 }
 #boardWriteBox{
 	text-align:right;
@@ -51,5 +53,6 @@
 	display:inline-block;
 	padding:10px 25px;
 	background:#596ec7;
-	color:white; border-radius:10px;
+	color:white;
+	border-radius:10px;
 }
