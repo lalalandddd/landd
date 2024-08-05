@@ -38,7 +38,7 @@
 </body>
 </html>
 <script>
-	var temp="${idList}";
+	var temp='${idList}';
 	const IdList=temp.substring(1,temp.length-1).split(", ");
 	$("input[name=userId]").on("keyup",function(){
 		var id=$(this).val();

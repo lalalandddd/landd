@@ -14,23 +14,23 @@
 	<table>
 		<tr>
 			<td>제목</td>
-			<td>${studysite_board.title }</td>
+			<td>${board.title }</td>
 		</tr>
 		<tr>
 			<td>조회수</td>
-			<td>${studysite_board.hit }</td>
+			<td>${board.hit }</td>
 		</tr>
 		<tr>
 			<td>작성자</td>
-			<td>${studysite_board.writer }</td>
+			<td>${board.writer }</td>
 		</tr>
 		<tr>
 			<td>내용</td>
-			<td>${studysite_board.content }</td>
+			<td>${board.content }</td>
 		</tr>
 		<tr>
 			<td colspan='2'>
-				<c:if test="${sessionScope.user eq studysite_board.writer }">
+				<c:if test="${sessionScope.user eq board.writer }">
 					<button type="button" id="modify">수정</button>
 					<button type="button" id="delete">삭제</button>
 				</c:if>
@@ -53,11 +53,11 @@
 		<c:forEach var="row" items="${comments }">
 		<tr>
 			<td>${row.writer }<br>${row.writeDate }<br>
-			<c:if  test="${ sessionScope.user eq row.writer }">
-				<a href="/commentDelete.do?id=${row.commentId }">삭제</a>
+			<c:if test="${ sessionScope.user eq row.writer }">
+				<a href="/commentDelete.do?id=${row.commentId }&bid=${board.board_id}">삭제</a>
 			</c:if>
 			</td>
-			<td>${row.comments }</td>
+			<td>${row.comment }</td>
 		</tr>
 		</c:forEach>
 	</table>
@@ -69,18 +69,18 @@
 		let $fm=$('<form></form>');  // 폼 태그 생성
 		$fm.attr('method','get');
 		$fm.attr('action','/comment.do');
-		$fm.append("<input type=hidden name=boardId value=${studysite_board.board_id}>");
+		$fm.append("<input type=hidden name=boardId value=${board.board_id}>");
 		$fm.append($("#comment"));  // id는 comment
 		$fm.appendTo("body");  // body 안에 넣기
 		$fm.submit();  // 전송
 	});
 	$("#modify").on("click",function(){
-		location.href="/boardUpdate.do?id=${studysite_board.board_id}";
+		location.href="/boardUpdate.do?id=${board.board_id}";
 	});
 	$("#delete").on("click",function(){
 		var isOk=confirm("정말로 삭제하시겠습니까?");
 		if(isOk){
-			location.href="/boardDelete.do?id=${studysite_board.board_id}";
+			location.href="/boardDelete.do?id=${board.board_id}";
 		}
 	});
 </script>

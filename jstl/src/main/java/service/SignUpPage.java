@@ -14,6 +14,6 @@ public class SignUpPage implements MainActive {
 		MemberDAO dao=new MemberDAO();
 		List<String> ids=dao.findAllUserId();
 		request.setAttribute("idList",ids);
-		return "/Member/signUp.html";
+		return "/Member/signUp.jsp";
 	}
 }

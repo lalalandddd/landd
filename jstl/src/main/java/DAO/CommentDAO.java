@@ -14,7 +14,7 @@ public class CommentDAO extends DBConnect{
 			pt.setInt(1, bid);
 			pt.setString(2, comment);
 			pt.setString(3, writer);
-			rs=pt.executeQuery();
+			pt.executeUpdate();
 		}catch(SQLException e) {
 			System.out.println("댓글 저장 실패");
 			e.printStackTrace();
@@ -35,5 +35,16 @@ public class CommentDAO extends DBConnect{
 			e.printStackTrace();
 		}
 		return list;
+	}
+	public void delete(int cid) {
+		String sql="delete from comment where comment_id=?";
+		try {
+			pt=conn.prepareStatement(sql);
+			pt.setInt(1,cid);
+			pt.executeUpdate();
+		}catch(SQLException e) {
+			System.out.println("댓글 삭제 실패");
+			e.printStackTrace();
+		}
 	}
 }

@@ -7,14 +7,14 @@ import java.util.List;
 import DTO.BoardDTO;
 
 public class BoardDAO extends DBConnect {
-	public BoardDTO findById(int bid){
+	public BoardDTO findById(int bid){  // 게시글 상세 페이지
 		String sql="select * from studysite_board where board_id=?";
 		try {
 			pt=conn.prepareStatement(sql);
 			pt.setInt(1, bid);
 			rs=pt.executeQuery();
 			if(rs.next()) {
-				return new BoardDTO(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getInt(5));
+				return new BoardDTO(rs.getInt(1),rs.getString(3),rs.getString(2),rs.getString(4),rs.getInt(5));
 			}
 		}catch(SQLException e) {
 			System.out.println("게시글 상세 데이터 조회 실패");
