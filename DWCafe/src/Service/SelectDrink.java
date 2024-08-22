@@ -51,6 +51,7 @@ public class SelectDrink implements Kiosk{
 //		for(Integer id:ids) {
 //			System.out.println(id+". "+tea.get(id));
 //		}
+	
 		tea.forEach((k,v)->System.out.println(k+". "+v));  // 위 세 줄과 동일 효과
 		Scanner sc=new Scanner(System.in);
 		System.out.print("메뉴 선택 : ");
